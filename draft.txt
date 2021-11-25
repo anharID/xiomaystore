@@ -1,0 +1,9 @@
+ <input type="text" name="nama" placeholder="Nama Lengkap" class="input-control"
+                        value="<?php echo $d -> nama  ?>" required>
+                    <input type="email" name="email" placeholder="Email" class="input-control"
+                        value="<?php echo $d -> email  ?>" required>
+                    <input type="password" name="pass" placeholder="Password" class="input-control"
+                        value="<?php echo $d -> password  ?>" required>
+                    <input type="text" name="alamat" placeholder="Alamat" class="input-control"
+                        value="<?php echo $d -> alamat  ?>" required>
+                    <input type="submit" name="submit" value="Ubah Profil" class="btn">
