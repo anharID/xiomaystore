@@ -89,3 +89,16 @@ header ul li a {
   box-sizing: border-box;
   margin: 10px 0;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tr {
+  height: 30px;
+}
+
+.table tr td {
+  padding: 5px 10px;
+}
