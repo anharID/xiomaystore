@@ -65,7 +65,8 @@
                         <tr>
                             <td><?php echo $no++ ?></td>
                             <td><?php echo $row->nama ?></td>
-                            <td><img src="assets/hp/<?php echo $row->gambar ?>" alt="" width="60px"></td>
+                            <td><a href="assets/hp/<?php echo $row->gambar ?>" target="_blank"><img
+                                        src="assets/hp/<?php echo $row->gambar ?>" alt="" width="60px"></a></td>
                             <td>Rp. <?php echo number_format( $row->harga) ?></td>
                             <td><?php echo $row->stok ?></td>
                             <td><a href="edit-hp.php?id=<?php echo $row->id_hp ?>">Edit</a> || <a

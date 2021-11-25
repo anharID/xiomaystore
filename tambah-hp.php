@@ -42,7 +42,7 @@
     <!-- content -->
     <div class="section">
         <div class="container">
-            <h3>Edit Data HP</h3>
+            <h3>Tambah Data HP</h3>
             <div class="box">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="text" name="nama" placeholder="Nama Produk" class="input-control" required>
