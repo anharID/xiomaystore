@@ -42,7 +42,7 @@
     <!-- content -->
     <div class="section">
         <div class="container">
-            <h3>Tambah Data HP</h3>
+            <h3>Tambah Data Aksesoris</h3>
             <div class="box">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="text" name="nama" placeholder="Nama Produk" class="input-control" required>
@@ -57,8 +57,8 @@
                         // print_r($_FILES['gambar']);
 
                         //menampung data dari form
-						$nama 		= $_POST['nama'];
-						$harga 		= $_POST['harga'];
+						$nama 	= $_POST['nama'];
+						$harga 	= $_POST['harga'];
 						$stok 	= $_POST['stok'];
 
                         //menampung data upload
@@ -67,7 +67,7 @@
                         $tipe1 = explode('.', $filename);
 						$tipe2 = $tipe1[1];
 
-                        $newname = 'hp'.time().'.'.$tipe2;
+                        $newname = 'aksesoris'.time().'.'.$tipe2;
 
                         //menampung data format yang diizinkan
                         $tipe_diizinkan = array('jpg', 'jpeg', 'png', 'gif');
@@ -80,9 +80,9 @@
                         else{
                             //jika format file sesuai
                             //proses upload dan insert
-                            move_uploaded_file($tmp_name, './assets/hp/'.$newname);
+                            move_uploaded_file($tmp_name, './assets/aksesoris/'.$newname);
 
-                            $insert = $insert = mysqli_query($mysqli, "INSERT INTO tb_hp VALUES (
+                            $insert = $insert = mysqli_query($mysqli, "INSERT INTO tb_aksesoris VALUES (
                             null,
                             '".$nama."',
                             '".$newname."',
@@ -92,7 +92,7 @@
 
                                 if($insert){
                                     echo '<script>alert("Tambah data berhasil")</script>';
-                                    echo '<script>window.location="data-hp.php"</script>';
+                                    echo '<script>window.location="data-aksesoris.php"</script>';
                                 }else{
                                     echo 'gagal '.mysqli_error($mysqli);
                                 }
