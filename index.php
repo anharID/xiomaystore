@@ -51,7 +51,7 @@
 						while($h = mysqli_fetch_array($hp)){
                             
 				?>
-                <a href="detail-beli.php?id=<?php echo $h['id_hp'] ?>">
+                <a href="form-beli-hp.php?id-hp=<?php echo $h['id_hp'] ?>">
                     <div class="col-4">
                         <img src="assets/hp/<?php echo $h['gambar'] ?>">
                         <p class="nama"><?php echo substr($h['nama'], 0, 30) ?></p>

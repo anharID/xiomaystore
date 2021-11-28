@@ -49,7 +49,7 @@
 					if(mysqli_num_rows($ekosistem) > 0){
 						while($e = mysqli_fetch_array($ekosistem)){
 				?>
-                <a href="detail-beli.php?id=<?php echo $e['id_produk'] ?>">
+                <a href="form-beli-ekosistem.php?id-e=<?php echo $e['id_produk'] ?>">
                     <div class="col-4">
                         <img src="assets/ekosistem/<?php echo $e['gambar']?>">
                         <p class="nama"><?php echo $e['nama'] ?></p>

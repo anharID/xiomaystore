@@ -46,6 +46,47 @@
         </div>
     </div>
 
+    <div class="session">
+        <div class="container">
+            <h3>Riwayat Transaksi Pembeli</h3>
+            <div class="box">
+                <table border="1" cellspacing="0" class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Produk dibeli</th>
+                            <th>Harga</th>
+                            <th>Nama Pembeli</th>
+                            <th>Alamat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        include 'config.php';
+                            $no=1;
+                            $transaksi = mysqli_query($mysqli, "SELECT * FROM view_transaksi");
+
+                            if(mysqli_num_rows($transaksi) > 0 ){
+                            while($row=mysqli_fetch_object($transaksi)){
+                            ?>
+                        <tr>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $row->tanggal ?></td>
+                            <td><?php echo $row->produk ?></td>
+                            <td><?php echo $row->harga ?></td>
+                            <td><?php echo $row->nama ?></td>
+                            <td><?php echo $row->alamat ?></td>
+                        </tr>
+                        <?php }} else{ ?>
+                        <td colspan="6">Tidak ada data</td>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- footer -->
     <footer>
         <div class="container">

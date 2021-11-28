@@ -50,7 +50,7 @@
 					if(mysqli_num_rows($aksesoris) > 0){
 						while($a = mysqli_fetch_array($aksesoris)){
 				?>
-                <a href="detail-beli.php?id=<?php echo $a['id_aksesoris'] ?>">
+                <a href="form-beli-aksesoris.php?id-a=<?php echo $a['id_aksesoris'] ?>">
                     <div class="col-4">
                         <img src="assets/aksesoris/<?php echo $a['gambar']?>">
                         <p class="nama"><?php echo $a['nama'] ?></p>
